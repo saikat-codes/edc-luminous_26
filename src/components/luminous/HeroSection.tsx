@@ -24,7 +24,6 @@ export function HeroSection() {
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 pt-32 md:px-10 md:pb-28">
         <img src={logo.src} alt={logo.alt} className="hero-in h-12 w-auto md:h-16" />
-        <p className="hero-in chapter-label mt-8 text-ivory/70">EDC · {event.institute} presents</p>
         <h1 className="hero-in mt-4 font-brand text-[clamp(2.4rem,6.5vw,5.2rem)] font-bold uppercase leading-[0.95] tracking-[0.06em] text-ivory text-glow">
           {event.shortName}
           <span className="ml-3 align-top font-sans text-[0.38em] font-medium not-italic tabular-nums text-gold tracking-normal">

@@ -1,15 +1,47 @@
 import { cn } from "@/lib/utils";
 
-/** Terracotta diya drawn in SVG with a CSS flame. */
-export function Diya({ lit = true, className, flameClass }: { lit?: boolean; className?: string; flameClass?: string }) {
+/**
+ * Terracotta diya drawn in SVG with a warm flickering flame and soft circular glow.
+ *
+ * Sizing & Glow:
+ * - The ambient glow is a square (w-20 h-20), rounded-full container centered on the flame.
+ * - The radial-gradient reaches 0% opacity (transparent) at 70% of radius, well inside
+ *   the bounding box (which ends at 100%). This guarantees a 100% natural, smooth, rounded
+ *   falloff with ZERO clipping or chopping on top, bottom, or sides.
+ */
+export function Diya({
+  lit = true,
+  className,
+  flameClass,
+}: {
+  lit?: boolean;
+  className?: string;
+  flameClass?: string;
+}) {
   return (
-    <div className={cn("relative aspect-[2/1.3] w-24", className)}>
+    <div className={cn("relative aspect-[2/1.3] w-24 shrink-0", className)}>
       {lit && (
         <>
-          <div className="pointer-events-none absolute left-1/2 top-[10%] h-[300%] w-[300%] -translate-x-1/2 -translate-y-1/2 glow-gold" />
-          <div className={cn("flame absolute left-1/2 top-[-38%] h-[55%] w-[18%] -translate-x-1/2", flameClass)} />
+          {/* Soft, reduced, perfectly round ambient warm glow centered on the flame */}
+          <div
+            className="pointer-events-none absolute left-1/2 top-[-15%] h-20 w-20 -translate-x-1/2 -translate-y-1/2 rounded-full"
+            style={{
+              background:
+                "radial-gradient(circle at center, oklch(0.85 0.15 75 / 0.35) 0%, oklch(0.78 0.13 60 / 0.14) 30%, oklch(0.70 0.10 50 / 0.03) 50%, transparent 68%)",
+            }}
+            aria-hidden="true"
+          />
+
+          {/* Flickering flame with subtle warm aura */}
+          <div
+            className={cn(
+              "flame absolute left-1/2 top-[-38%] h-[55%] w-[18%] -translate-x-1/2 drop-shadow-[0_0_5px_oklch(0.88_0.15_75/0.65)]",
+              flameClass,
+            )}
+          />
         </>
       )}
+
       <svg viewBox="0 0 200 130" className="relative h-full w-full">
         <defs>
           <linearGradient id="clay" x1="0" y1="0" x2="0" y2="1">

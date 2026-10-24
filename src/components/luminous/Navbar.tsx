@@ -28,6 +28,7 @@ export function Navbar() {
           scrolled ? "bg-plum/90 backdrop-blur-md" : "bg-plum/30",
         )}
       >
+        {/* Left — logo lockup */}
         <a href="#home" className="group flex items-center gap-3 text-ivory transition-opacity hover:opacity-95">
           <img src={logo.src} alt={logo.alt} className="h-7 w-auto transition-transform duration-300 group-hover:scale-105" />
           <div className="flex items-baseline gap-1.5">
@@ -39,29 +40,33 @@ export function Navbar() {
             </span>
           </div>
         </a>
-        <nav className="hidden items-center gap-8 md:flex">
+
+        {/* Centre — nav links strictly centered in the viewport */}
+        <nav className="absolute left-1/2 -translate-x-1/2 hidden items-center gap-8 md:flex">
           {chapters.map((c) => (
             <a
               key={c.id}
               href={`#${c.id}`}
               className={cn(
-                "text-sm transition-colors hover:text-gold",
-                c.id === "register" ? "text-gold" : "text-ivory/70",
+                "font-brand text-[0.84rem] font-semibold uppercase tracking-[0.16em] transition-all duration-200 hover:text-gold hover:tracking-[0.2em]",
+                c.id === "register" ? "text-gold font-bold" : "text-ivory/80",
               )}
             >
               {c.label}
             </a>
           ))}
         </nav>
+
+        {/* Right — register + mobile menu */}
         <div className="flex items-center gap-3">
-        <RegisterButton />
-        <Button variant="ghost"
-          className="text-sm text-ivory md:hidden"
-          onClick={() => setOpen((o) => !o)}
-          aria-expanded={open}
-        >
-          {open ? "Close" : "Menu"}
-        </Button>
+          <RegisterButton />
+          <Button variant="ghost"
+            className="text-sm text-ivory md:hidden"
+            onClick={() => setOpen((o) => !o)}
+            aria-expanded={open}
+          >
+            {open ? "Close" : "Menu"}
+          </Button>
         </div>
       </header>
 
@@ -72,9 +77,9 @@ export function Navbar() {
               key={c.id}
               href={`#${c.id}`}
               onClick={() => setOpen(false)}
-              className="font-display text-4xl text-ivory"
+              className="font-brand text-3xl font-semibold uppercase tracking-wider text-ivory transition-colors hover:text-gold"
             >
-              <span className="mr-4 align-top text-xs text-gold">0{i + 1}</span>
+              <span className="mr-4 align-top font-sans text-xs text-gold">0{i + 1}</span>
               {c.label}
             </a>
           ))}
