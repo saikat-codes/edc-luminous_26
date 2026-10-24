@@ -17,11 +17,11 @@ const PRELIM_PHOTOS = [
 const STRIP = [
   { media: photos.lighter, ratio: "1616 / 1080" },
   { media: photos.nabAerial, ratio: "1616 / 1080" },
-  { media: photos.prelimMentor, ratio: "1600 / 1200" },
+  { media: photos.team2, ratio: "1600 / 1069" },
   { media: photos.rangoli, ratio: "1600 / 1069" },
-  { media: photos.prelimGirl, ratio: "1200 / 1600" },
+  { media: photos.team1, ratio: "4096 / 2304" },
   { media: photos.diyaPath, ratio: "1148 / 774" },
-  { media: photos.prelimPavilion, ratio: "1600 / 1200" },
+  { media: photos.lantern, ratio: "1069 / 1600" },
   { media: photos.diyaSpiral, ratio: "1616 / 1080" },
 ];
 
@@ -123,21 +123,18 @@ export function StorySection() {
           </div>
 
           <div className="ch-text md:col-span-5">
-            <p className="chapter-label text-vermilion">Chapter 02 — Preliminaries · BMEP × EDC</p>
+            <p className="chapter-label text-vermilion">Chapter 02 — Pre-Luminous · BMEP × EDC</p>
             <h3 className="mt-5 font-display text-4xl font-semibold leading-tight md:text-5xl">
               Diyas, coloured <span className="font-serif font-normal italic text-vermilion">by hand.</span>
             </h3>
             <div className="my-7 h-px w-16 bg-gold shadow-flame" />
             <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
-              In the Preliminaries, run by BMEP together with EDC, participants colour and decorate diyas — each one becoming a small piece of art.
+              In Pre-Luminous, run by BMEP together with EDC, participants colour and decorate diyas — each one becoming a small piece of art.
             </p>
             <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
               The finished diyas are then sold to professors and campus members. The proceeds and diyas used for the activity bring warm support to local communities.
             </p>
             <div className="mt-6 flex flex-wrap gap-2 text-xs">
-              <span className="rounded-full border border-border/60 bg-ivory/40 px-3 py-1 font-medium text-foreground">
-                6 Workshop Perspectives
-              </span>
               <span className="rounded-full border border-border/60 bg-ivory/40 px-3 py-1 font-medium text-foreground">
                 BMEP × EDC Initiative
               </span>
