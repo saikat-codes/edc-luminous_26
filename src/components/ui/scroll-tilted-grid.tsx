@@ -128,7 +128,7 @@ function GalleryTile({
   return (
     <figure
       ref={tileRef}
-      className={cn("m-0 min-w-0", side > 0 && "md:mt-20")}
+      className={cn("m-0 min-w-0", side > 0 && "md:mt-6")}
       style={variables}
     >
       <div
@@ -204,7 +204,7 @@ export function ScrollTiltedGrid({
       aria-label="Scroll-reactive image gallery"
     >
       <div
-        className="mx-auto grid w-full max-w-5xl grid-cols-1 items-start gap-12 px-6 md:grid-cols-2 md:gap-x-16 md:gap-y-20 md:px-12"
+        className="mx-auto grid w-full max-w-6xl grid-cols-1 items-start gap-6 px-4 md:grid-cols-2 md:gap-x-8 md:gap-y-8 md:px-8"
         style={{ paddingBlock: sectionPadding }}
       >
         {tiles.map(({ cycle, image, index }) => (

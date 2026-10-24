@@ -28,9 +28,16 @@ export function Navbar() {
           scrolled ? "bg-plum/90 backdrop-blur-md" : "bg-plum/30",
         )}
       >
-        <a href="#home" className="flex items-center gap-3 font-sans text-sm font-semibold text-ivory">
-          <img src={logo.src} alt={logo.alt} className="h-7 w-auto" />
-          <span className="hidden sm:inline">{event.name}</span>
+        <a href="#home" className="group flex items-center gap-3 text-ivory transition-opacity hover:opacity-95">
+          <img src={logo.src} alt={logo.alt} className="h-7 w-auto transition-transform duration-300 group-hover:scale-105" />
+          <div className="flex items-baseline gap-1.5">
+            <span className="font-brand text-sm font-bold tracking-[0.2em] text-ivory uppercase transition-colors group-hover:text-gold">
+              {event.shortName}
+            </span>
+            <span className="font-sans text-[0.68rem] font-semibold text-gold tabular-nums tracking-normal">
+              {event.edition}
+            </span>
+          </div>
         </a>
         <nav className="hidden items-center gap-8 md:flex">
           {chapters.map((c) => (

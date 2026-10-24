@@ -5,8 +5,9 @@ import { gsap, useGSAP, prefersReduced } from "./gsap";
 const ITEMS = [
   { m: photos.crowdEdc, cls: "md:col-span-8 md:row-span-2 aspect-[3/2] md:aspect-auto", cap: "The whole family, around the letters we lit" },
   { m: photos.nabAerial, cls: "md:col-span-4 md:row-span-2 aspect-[2/3] md:aspect-auto", cap: "NAB from top with lit diyas" },
-  { m: photos.team2, cls: "md:col-span-5 aspect-[4/3]", cap: "Hearts, in flame" },
-  { m: photos.diyaSpiral, cls: "md:col-span-7 aspect-[16/10]", cap: "Hands that light" },
+  { m: photos.introGroupGlow, cls: "md:col-span-4 aspect-[4/3] md:aspect-auto", cap: "Hearts, in flame" },
+  { m: photos.nightEdcEmblem, cls: "md:col-span-4 aspect-[4/3] md:aspect-auto", cap: "Gathered around the EDC emblem" },
+  { m: photos.diyaSpiral, cls: "md:col-span-4 aspect-[4/3] md:aspect-auto", cap: "Hands that light" },
 ];
 
 export function MemoriesSection() {
