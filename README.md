@@ -1,29 +1,75 @@
-# Welcome to your Lovable project
+# LUMINOUS – EDC NIT Durgapur
 
-This project was built with [Lovable](https://lovable.dev).
+A vibrant, modern web experience showcasing the **EDC NIT Durgapur** events. Built with the latest **React**, **TanStack Start**, **TypeScript**, and **Tailwind CSS**, the site features interactive galleries, smooth animations, and a responsive design.
 
-## Build with Lovable
+---
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+## ✨ Features
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Responsive Layout** – Optimized for mobile, tablet, and desktop.
+- **Dynamic Gallery** – Scroll‑reactive image grids with smooth transitions.
+- **Custom Footer** – Social links to Instagram, LinkedIn, and the official website.
+- **Dark/Light Mode** – Automatic adaption with elegant color palettes.
+- **Modern Tooling** – Vite for fast dev server and build, TanStack Query for data fetching, and Tailwind CSS v4 for styling.
 
-## Development
+---
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## 🛠️ Tech Stack
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
+- **Framework**: [TanStack Start](https://tanstack.com/start) (React + TypeScript)
+- **Styling**: Tailwind CSS v4, custom CSS variables for branding
+- **State Management**: @tanstack/react-query
+- **Animations**: GSAP & Framer Motion
+- **Form handling**: react-hook-form with Zod validation
+- **Date handling**: date-fns & date-fns/tz
+- **Icons**: lucide-react
+- **Build**: Vite 8
+
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- **Node.js** (>=20) – Install via [nvm](https://github.com/nvm-sh/nvm).
+- **pnpm** (optional) – Faster install, but `npm` works as well.
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/saikat-codes/edc-luminous_26.git
+cd edc-luminous_26
+
+# Install dependencies
 npm i
-npm run dev
+# or using pnpm
+# pnpm i
 ```
 
-## Built with
+### Development
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+```bash
+npm run dev
+# Opens http://localhost:5173
+```
+
+### Building for Production
+
+```bash
+npm run build
+# Outputs to the `dist` folder
+```
+
+---
+
+## 🚀 Deploy
+
+The project is deployed in [Vercel](https://edc-luminous26.vercel.app/).
+
+---
+
+
+## 📜 License
+
+MIT – Feel free to use, modify, and share.
