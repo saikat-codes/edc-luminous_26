@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 import { chapters, event, logo } from "@/data/luminous";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -24,25 +25,32 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 py-5 transition-all duration-700 md:px-10",
-          scrolled ? "bg-plum/90 backdrop-blur-md" : "bg-plum/30",
+          "fixed inset-x-0 top-0 z-50 flex items-center justify-between px-3.5 py-3 transition-all duration-500 sm:px-6 sm:py-4 md:px-10 md:py-5",
+          scrolled || open ? "bg-plum/95 backdrop-blur-md shadow-md" : "bg-plum/30 backdrop-blur-sm",
         )}
       >
         {/* Left — logo lockup */}
-        <a href="#home" className="group flex items-center gap-3 text-ivory transition-opacity hover:opacity-95">
-          <img src={logo.src} alt={logo.alt} className="h-7 w-auto transition-transform duration-300 group-hover:scale-105" />
-          <div className="flex items-baseline gap-1.5">
-            <span className="font-brand text-sm font-bold tracking-[0.2em] text-ivory uppercase transition-colors group-hover:text-gold">
+        <a
+          href="#home"
+          className="group flex min-w-0 shrink-0 items-center gap-2 text-ivory transition-opacity hover:opacity-95 sm:gap-3"
+        >
+          <img
+            src={logo.src}
+            alt={logo.alt}
+            className="h-6 w-auto shrink-0 transition-transform duration-300 group-hover:scale-105 sm:h-7"
+          />
+          <div className="hidden shrink-0 items-baseline gap-1 min-[340px]:flex sm:gap-1.5">
+            <span className="font-brand text-xs font-bold tracking-wider uppercase text-ivory transition-colors group-hover:text-gold sm:text-sm sm:tracking-[0.2em]">
               {event.shortName}
             </span>
-            <span className="font-sans text-[0.68rem] font-semibold text-gold tabular-nums tracking-normal">
+            <span className="font-sans text-[0.62rem] font-semibold tabular-nums tracking-normal text-gold sm:text-[0.68rem]">
               {event.edition}
             </span>
           </div>
         </a>
 
         {/* Centre — nav links strictly centered in the viewport */}
-        <nav className="absolute left-1/2 -translate-x-1/2 hidden items-center gap-8 md:flex">
+        <nav className="absolute left-1/2 -translate-x-1/2 hidden items-center gap-6 md:flex lg:gap-8">
           {chapters.map((c) => (
             <a
               key={c.id}
@@ -58,14 +66,20 @@ export function Navbar() {
         </nav>
 
         {/* Right — register + mobile menu */}
-        <div className="flex items-center gap-3">
-          <RegisterButton />
-          <Button variant="ghost"
-            className="text-sm text-ivory md:hidden"
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
+          <RegisterButton
+            size="sm"
+            className="h-8 shrink-0 px-2.5 text-xs sm:h-9 sm:px-4 sm:text-sm"
+          />
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-8 w-8 shrink-0 text-ivory hover:bg-white/10 hover:text-gold md:hidden"
             onClick={() => setOpen((o) => !o)}
             aria-expanded={open}
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           >
-            {open ? "Close" : "Menu"}
+            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </Button>
         </div>
       </header>
@@ -83,6 +97,11 @@ export function Navbar() {
               {c.label}
             </a>
           ))}
+          <div className="mt-4 border-t border-ivory/10 pt-6">
+            <RegisterButton
+              className="h-11 w-full justify-center text-sm font-semibold"
+            />
+          </div>
         </div>
       )}
 

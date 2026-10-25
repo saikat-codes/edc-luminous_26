@@ -4,12 +4,29 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { event } from "@/data/luminous";
 import { registrationHref } from "@/lib/registration";
 
-export function RegisterButton({ className }: { className?: string }) {
+export function RegisterButton({
+  className,
+  size,
+}: {
+  className?: string;
+  size?: "default" | "sm" | "lg" | "icon";
+}) {
   const href = registrationHref(event);
-  if (href) return <Button asChild className={className}><a href={href}>Register <ArrowUpRight /></a></Button>;
+  if (href)
+    return (
+      <Button asChild size={size} className={className}>
+        <a href={href}>
+          Register <ArrowUpRight className="size-3.5 sm:size-4 shrink-0" />
+        </a>
+      </Button>
+    );
   return (
     <Dialog>
-      <DialogTrigger asChild><Button className={className}>Register <ArrowUpRight /></Button></DialogTrigger>
+      <DialogTrigger asChild>
+        <Button size={size} className={className}>
+          Register <ArrowUpRight className="size-3.5 sm:size-4 shrink-0" />
+        </Button>
+      </DialogTrigger>
       <DialogContent className="section-light max-w-[calc(100%-2rem)] sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Registration coming soon</DialogTitle>
