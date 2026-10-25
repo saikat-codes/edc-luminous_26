@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { photos } from "@/data/luminous";
 import { gsap, useGSAP, prefersReduced } from "./gsap";
-import { ScrollTiltedGrid } from "@/components/ui/scroll-tilted-grid";
 import { ChapterSlideshow, type SlideItem } from "./ChapterSlideshow";
 
 const INTRO_PHOTOS: SlideItem[] = [
@@ -29,14 +28,6 @@ const RANGOLI_PHOTOS: SlideItem[] = [
   { media: photos.introDiyaFormation, title: "Floor of Radiance", desc: "Glowing constellation of earthen diyas illuminating the campus" },
 ];
 
-const STRIP = [
-  { media: photos.nightLantern, ratio: "3 / 4" },
-  { media: photos.nightGirlsDiyaPath, ratio: "1148 / 774" },
-  { media: photos.lighter, ratio: "1616 / 1080" },
-  { media: photos.nightHeartDiyas, ratio: "2 / 3" },
-  { media: photos.nightNabAerial, ratio: "1600 / 1069" },
-  { media: photos.team1, ratio: "16 / 9" },
-];
 
 export function StorySection() {
   const ref = useRef<HTMLElement>(null);
@@ -137,19 +128,6 @@ export function StorySection() {
         </article>
       </div>
 
-      {/* Moments from the night */}
-      <div className="mt-20 md:mt-28" aria-label="Moments from the night">
-        <p className="chapter-label mx-auto max-w-6xl px-4 text-antique md:px-8">Moments from the night</p>
-        <ScrollTiltedGrid
-          className="mt-6"
-          sectionPadding="1rem"
-          images={STRIP.map(({ media, ratio }) => ({ src: media.src, alt: media.alt, aspectRatio: ratio }))}
-          smoothScroll={false}
-          loop={false}
-          maxTilt={14}
-          maxBlur={0}
-        />
-      </div>
     </section>
   );
 }
