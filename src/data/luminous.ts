@@ -73,9 +73,9 @@ export const event = {
   registrationUrl: "",
   contactEmail: "",
   socials: [
-    { label: "Instagram", url: "" },
-    { label: "LinkedIn", url: "" },
-    { label: "Facebook", url: "" },
+    { label: "Instagram", url: "https://www.instagram.com/edc_nitd/" },
+    { label: "LinkedIn", url: "https://in.linkedin.com/company/edcnitd" },
+    { label: "Website", url: "https://edcnitd.co.in/" },
   ],
 };
 
