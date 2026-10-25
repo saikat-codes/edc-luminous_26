@@ -35,6 +35,12 @@ export function HeroSection() {
         </p>
         <div className="hero-in mt-10 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-ivory/15 pt-6">
           <Diya className="w-12" />
+          {event.date && (
+            <div>
+              <p className="chapter-label !text-[0.6rem] text-ivory/50">Date</p>
+              <p className="mt-1 font-sans text-lg font-semibold tabular-nums text-ivory">{event.date}</p>
+            </div>
+          )}
           <div>
             <p className="chapter-label !text-[0.6rem] text-ivory/50">Venue</p>
             <p className="mt-1 font-display text-lg text-ivory">{event.venue}</p>

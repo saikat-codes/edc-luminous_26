@@ -58,7 +58,7 @@ export type Media = {
 export const event = {
   name: "LUMINOUS 10.0",
   shortName: "LUMINOUS",
-  organiser: "Entrepreneurship & Development Cell",
+  organiser: "Entrepreneurship Development Cell",
   organiserShort: "EDC",
   institute: "NIT Durgapur",
   tagline: "A thousand little lights.",
@@ -66,7 +66,7 @@ export const event = {
   // Leave empty until confirmed by organisers — UI shows "Coming soon".
   edition: "10.0",
   theme: "",
-  date: "",
+  date: "4 Nov",
   venue: "New Academic Building (NAB)",
   time: "6:00 PM onwards",
   registrationOpen: false,

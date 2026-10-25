@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Globe, ArrowUpRight, MapPin, Clock } from "lucide-react";
+import { Instagram, Linkedin, Globe, ArrowUpRight, MapPin, Clock, Calendar } from "lucide-react";
 import { event, logo } from "@/data/luminous";
 
 const SOCIAL_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -32,6 +32,15 @@ export function FooterSection() {
             </p>
 
             <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 font-sans text-xs text-ivory/60">
+              {event.date && (
+                <>
+                  <span className="flex items-center gap-1.5 text-ivory/90">
+                    <Calendar className="size-3.5 shrink-0 text-gold" />
+                    <span>{event.date}</span>
+                  </span>
+                  <span className="hidden text-ivory/30 sm:inline">·</span>
+                </>
+              )}
               <span className="flex items-center gap-1.5 text-gold/90">
                 <MapPin className="size-3.5 shrink-0 text-gold" />
                 <span>{event.venue}</span>

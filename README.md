@@ -1,6 +1,6 @@
-# LUMINOUS – EDC NIT Durgapur
+# LUMINOUS 10.0 – EDC NIT Durgapur
 
-A vibrant, modern web experience showcasing the **EDC NIT Durgapur** events. Built with the latest **React**, **TanStack Start**, **TypeScript**, and **Tailwind CSS**, the site features interactive galleries, smooth animations, and a responsive design.
+A vibrant, modern web experience showcasing **LUMINOUS 10.0** by the **Entrepreneurship Development Cell (EDC), NIT Durgapur**, taking place on **4 Nov** at the New Academic Building (NAB). Built with **React**, **TanStack Start**, **TypeScript**, and **Tailwind CSS**.
 
 ---
 
