@@ -5,5 +5,9 @@
 - [x] Use Manrope for numbers and reduce uppercase interface labels.
 - [x] Alternate dark and light page sections with readable text.
 - [x] Show the complete rangoli with red and blue accents.
+<<<<<<< HEAD
 - [x] Verify the page and photo/rangoli framing at desktop and mobile widths.
 - [x] Mention Rangoli Competition entry fee (₹100 per team) on the main page in story and details sections.
+=======
+- [x] Verify the page and photo/rangoli framing at desktop and mobile widths.
+>>>>>>> origin/main

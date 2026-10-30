@@ -11,7 +11,11 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+<<<<<<< HEAD
 import { reportRuntimeError } from "../lib/runtime-error-reporting";
+=======
+import { reportLovableError } from "../lib/lovable-error-reporting";
+>>>>>>> origin/main
 
 function NotFoundComponent() {
   return (
@@ -39,7 +43,11 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
+<<<<<<< HEAD
     reportRuntimeError(error, { boundary: "tanstack_root_error_component" });
+=======
+    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+>>>>>>> origin/main
   }, [error]);
 
   return (
